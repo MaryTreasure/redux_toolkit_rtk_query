@@ -21,9 +21,14 @@ export const userSlice = createSlice({
     reducers: {
         increment(state, action: PayloadAction<number>) {
             state.count += action.payload;
+        },
+        decrement(state, action: PayloadAction<number>) {
+          state.count -= action.payload
         }
         
     }
 })
+
+export const {increment, decrement} = userSlice.actions;
 
 export default userSlice.reducer;
